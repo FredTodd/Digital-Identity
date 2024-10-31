@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+ 
+   overflow-y: none;
+   text-align: center;
+   padding: 0;
+   margin: 80px 0 0 0;
+   background: linear-gradient(-45deg, #034C00, #1C3810, #106E00, #39752A);
+   background-size: 400% 400%;
+   animation: gradient 15s ease infinite;
+   color: white;
+   letter-spacing: .5px;
+   
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+a {
+   color: white;
+    text-decoration: none
+}
+
+a:hover {
+        font-style: italic;
+ 
+}
+
+p {
+    text-align: center;
+    margin-bottom: 150px;
+     transform-origin: center;
+    font-size: 20px;
+	font-family: 'Tahoma', sans-serif;
+}
+
+.rotate{
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+    
+}
+.rotate2{
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.rotate3{
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+}
+
+.rotate4{
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+}
+
+.rotate5{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.rotate6{
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+}
+
+.rotate7{
+    -webkit-transform: rotate(55deg);
+    transform: rotate(55deg);
+}
+
+.rotate8{
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.rotate9{
+    -webkit-transform: rotate(65deg) translateX(-50%);
+    transform: rotate(65deg);
+}
+
+.rotate10{
+    -webkit-transform: rotate(70deg) translateX(-50%);
+    transform: rotate(70deg);
+}
