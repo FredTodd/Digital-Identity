@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-color: #FFE8D2;
+	overflow: hidden;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 1vw 4vw 4vw;
+	font-family: 'Tahoma', sans-serif;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 16vw;
+	line-height: 1;
+	margin: -.3em -.3em 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex: 24%;
+  max-width: 24%;
+  padding: 0 4px;
+  position: relative;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 80%;
+	display: block;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

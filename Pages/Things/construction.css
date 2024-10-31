@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+background-image: linear-gradient(0deg, #000000 25%, #ffff00 25%, #ffff00 50%, #000000 50%, #000000 75%, #ffff00 75%, #ffff00 100%);
+background-size: 140.00px 140.00px;	
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+  top: 50%;
+  left: 20%;
+}
+
+.container h1{
+	color: red;
+	font-size: 3rem;
+}
+
+.container a {
+	text-decoration: none;
+}
+
+@media (max-width: 960px) {
+	.container h1 {
+		font-size: 2rem;
+	}
+}

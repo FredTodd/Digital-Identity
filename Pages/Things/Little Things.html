@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>little things</title>
+	 <link rel="stylesheet" type="text/css" href="Things.css">
+</head>
+
+<body>
+	<h1>Bits and Bobs</h1>
+	
+	<div class="row">
+  <div class="column">
+	  <a href="construction.html"><img src="../Things/images/1.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/2.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/3.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/4.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/5.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/6.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/7.1.png" class="cycle"></a>
+  </div>
+ 	  <div class="column">
+      <a href="construction.html"><img src="../Things/images/8.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/9.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/10.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/11.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/12.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/13.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/14.1.png" class="cycle"></a>
+  </div>
+	  <div class="column">
+     <a href="construction.html"> <img src="../Things/images/15.1.png" class="cycle"></a>
+     <a href="construction.html"> <img src="../Things/images/16.1.png" class="cycle"></a>
+     <a href="construction.html"> <img src="../Things/images/17.1.png" class="cycle"></a>
+     <a href="construction.html"> <img src="../Things/images/18.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/19.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/20.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/21.1.png" class="cycle"></a>
+	</div>
+	  <div class="column">
+      <a href="construction.html"><img src="../Things/images/22.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/23.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/24.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/25.1.png" class="cycle"></a>
+      <a href="construction.html"><img src="../Things/images/26.1.png" class="cycle"></a>
+		  <a href="construction.html"><img src="../Things/images/8.1.png"> </a>
+		  <a href="../Home Page/Identity Page Home.html"><img src="../Things/images/Back Button.png"> </a>
+  </div>
+</div>
+	
+<script>
+const images = document.querySelectorAll('.cycle');
+const imageCount = 3;
+const imagePerOriginal = 1;
+
+let counters = Array.from({ length: images.length }, () => 1);
+let intervals = Array.from({ length: images.length }, () => null);
+
+images.forEach((img, index) => {
+  img.addEventListener('mouseover', () => {
+    intervals[index] = setInterval(() => {
+      const originalIndex = Math.floor(index / imagePerOriginal);
+      img.src = `../Things/images/${originalIndex+1}.${counters[index]}.png`;
+      counters[index]++;
+
+      if (counters[index] > imageCount + 1) {
+        counters[index] = 1;
+      }
+    }, 250);
+  });
+
+  img.addEventListener('mouseout', () => {
+    clearInterval(intervals[index]);
+    counters[index] = 1;
+    const originalIndex = Math.floor(index / imagePerOriginal);
+    img.src = `../Things/images/${originalIndex+1}.${counters[index]}.png`;
+  });
+});
+</script>
+
+</body>
+	
+	
+</html>
+	
+
